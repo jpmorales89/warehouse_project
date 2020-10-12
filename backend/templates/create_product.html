@@ -1,0 +1,17 @@
+{% extends 'index.html'%}
+{% block title %}Formulario{% endblock title %}
+{% block body %}
+
+<form method="post">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit">Crear</button>
+</form>
+
+
+
+
+
+
+
+{% endblock body %}
