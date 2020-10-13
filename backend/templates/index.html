@@ -7,7 +7,7 @@
 </head>
 <body>
     {% block body %}
-    <h1>ejemplo de prueba</h1>
+    <h1>Listado de productos</h1>
     <table border="2">
         <thead>
             <tr>
@@ -25,9 +25,11 @@
                 <td><a href="{% url 'edit_product' allProducts.id_producto %}">Editar</a></td>
                 <td><a href="{% url 'delete_product' allProducts.id_producto %}">Eliminar</a></td>
             </tr>
-            {% endfor %}
+            {% endfor %}            
         </tbody>
+
     </table>
+    <button type="submit">Crear Producto <a href="{% url 'create_product' %}"> </a></button>
     {% endblock body %}
 </body>
 </html>

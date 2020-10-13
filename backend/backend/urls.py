@@ -20,7 +20,7 @@ from apps.main.views import inicio,createProduct,editProduct,deleteProduct
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',inicio,name = 'index'),
-    path('create_product/',createProduct,name='create_product'),
+    path('api/products',createProduct,name="create_product"),
     path('edit_product/<int:id_producto>/',editProduct,name='edit_product'),
     path('delete_product/<int:id_producto>/',deleteProduct,name='delete_product')
 ]
