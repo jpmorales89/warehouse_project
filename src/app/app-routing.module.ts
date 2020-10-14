@@ -7,7 +7,8 @@ import { ListProductComponent } from './components/list-product/list-product.com
 const routes: Routes = [
   { path:'',redirectTo: 'index', pathMatch: 'full'},
   { path:'api/products',component: AddProductComponent},
-  { path:'api/product-list',component: ListProductComponent}
+  { path:'api/product-list',component: ListProductComponent},
+  { path:'api/edit-product',component: AddProductComponent}
 ];
 
 @NgModule({

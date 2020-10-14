@@ -22,14 +22,13 @@
                 <td>{{allProducts.id_producto}}</td>
                 <td>{{allProducts.nombre}}</td>
                 <td>{{allProducts.descripcion}}</td>
-                <td><a href="{% url 'edit_product' allProducts.id_producto %}">Editar</a></td>
-                <td><a href="{% url 'delete_product' allProducts.id_producto %}">Eliminar</a></td>
+                <td><a href="{% url 'edit-product' allProducts.id_producto %}">Editar</a></td>
+                <!--<td><a href="{% url 'delete_product' allProducts.id_producto %}">Eliminar</a></td>-->
             </tr>
             {% endfor %}            
         </tbody>
 
     </table>
-    <button type="submit">Crear Producto <a href="{% url 'edit_product' allProducts.id_producto %}"></a></button>
     {% endblock body %}
 </body>
 </html>

@@ -22,6 +22,6 @@ urlpatterns = [
     path('',inicio,name = 'index'),
     path('api/products',createProduct,name="create_product"),
     path('api/product-list',listProduct,name="product-list"),
-    path('edit_product/<int:id_producto>/',editProduct,name='edit_product'),
+    path('api/edit-product/<int:id_producto>/',editProduct,name='edit-product'),
     path('delete_product/<int:id_producto>/',deleteProduct,name='delete_product')
 ]

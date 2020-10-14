@@ -29,6 +29,7 @@ def createProduct(request):
             serializer.save()
             return JsonResponse(serializer.data, status=status.HTTP_201_CREATED) 
         return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return render(request,'create_product.html',context)
 
 def editProduct(request,id_producto):
     products =Producto.objects.get(id_producto = id_producto)
