@@ -11,7 +11,7 @@ export class WarehouseService {
   constructor(private http: HttpClient) { }
 
   getAll() {
-    return this.http.get(baseUrl);
+    return this.http.get('http://localhost:8000/api/product-list');
   }
 
   get(id) {

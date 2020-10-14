@@ -44,6 +44,12 @@ def editProduct(request,id_producto):
             return redirect('index')
     return render(request,'create_product.html',context)
 
+def listProduct(request):
+    if request.method == 'GET':
+        products = Producto.objects.all()
+        serializer  = WarehouseSerializer(products, many=True)
+        return JsonResponse(serializer.data, safe=False)
+
 def deleteProduct(request,id_producto):
     products =Producto.objects.get(id_producto = id_producto)
     products.delete()
